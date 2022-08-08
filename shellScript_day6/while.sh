@@ -54,4 +54,3 @@ printf "number of bets: $numOfBets \n";
 printf "times won: $timesWon \n";
 
 
-cd 

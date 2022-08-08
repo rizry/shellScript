@@ -1,9 +1,9 @@
 # 1
 read -p 'Enter a number till where to print the power of 2: ' num
 for((i= 1; i<= $num; i++)); do
-  printf "2^$i = $((2 ** i)) \n\n";
+  printf "2^$i = $((2 ** i)) \n";
 done
-
+printf "\n"
 
 # 2
 read -p 'Enter a number to get the nth harmonic number: ' num

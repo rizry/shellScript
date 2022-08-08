@@ -22,7 +22,7 @@ function convertTemp(){
       fi;;
 
     [*])
-      printf "That doesnt seem valid";;  
+      printf "That doesnt seem valid \n\n";;  
   esac
 
 }
@@ -37,7 +37,7 @@ function checkPalindrome(){
   n2=$2
   tmp=''
   if [ ${#n1} -ne ${#n2} ];then
-    printf "Not a palindrome \n";
+    printf "Not palindrome \n\n";
     return
   else
     for (( i=0; i<${#n1}; i++ ));do
@@ -47,9 +47,9 @@ function checkPalindrome(){
   fi
 
   if [ $n1 -eq $tmp ];then
-    printf "its a palindrome \n\n";
+    printf "they are palindrome \n\n";
   else
-    printf "Not a palindrome \n\n";
+    printf "Not palindrome \n\n";
   fi
 }
 
