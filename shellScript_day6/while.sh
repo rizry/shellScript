@@ -16,7 +16,24 @@ printf "\n"
 
 
 #2
-# read -p 'Think a number between 1 to 100: ' n
+echo 'Think a number between 1 to 100: '
+lower=1
+upper=100
+while (( lower <= upper )); do
+  middle=$(( (lower+upper) /2))
+  read -p "is your number $(( middle )) : " ans
+  if [[ $ans == 'yes' || $ans == 'y' ]];then
+    printf "great. thanks for playing \n\n"
+    break
+  fi  
+  read -p "is your number less than $middle : " response
+  case $response in 
+    [yY]|[yY][eE][sS])
+      upper=$((middle-1 ));;
+    [nN]|[nN][oO])
+      lower=$((middle+1 ));;
+  esac
+done
 
 
 #3
